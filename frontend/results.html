@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results - Voice Interview Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="results-container">
+    <h2 class="results-title">Interview Complete 🎉</h2>
+
+    <div class="score-circle">
+      <span id="scoreValue">--</span>
+      <span class="score-suffix">/100</span>
+    </div>
+
+    <div class="results-card">
+      <p class="result-label">Summary</p>
+      <p id="summaryText" class="summary-text"></p>
+
+      <p class="result-label">Strengths</p>
+      <ul id="strengthsList" class="results-list"></ul>
+
+      <p class="result-label">Areas to Improve</p>
+      <ul id="improveList" class="results-list"></ul>
+    </div>
+
+    <h3 class="breakdown-title">Question-by-Question Breakdown</h3>
+    <div id="breakdownContainer" class="breakdown-container"></div>
+
+    <button id="restartBtn" class="primary-btn">Start New Interview</button>
+  </div>
+
+  <script src="js/results.js"></script>
+</body>
+</html>

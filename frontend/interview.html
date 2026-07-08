@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview - Voice Interview Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="interview-container">
+
+    <div class="progress-bar">
+      <span id="progressText">Question 1</span>
+    </div>
+
+    <div class="question-card">
+      <p class="category-tag" id="categoryTag"></p>
+      <h2 class="question-text" id="questionText"></h2>
+      <button id="hearBtn" class="secondary-btn">🔊 Hear Question</button>
+    </div>
+
+    <div class="answer-section">
+      <button id="recordBtn" class="record-btn">🎙️ Start Recording</button>
+      <p id="recordingStatus" class="recording-status"></p>
+    </div>
+
+    <div id="resultSection" class="result-section" style="display: none;">
+      <p class="result-label">You said:</p>
+      <p id="transcribedText" class="transcribed-text"></p>
+
+      <p class="result-label">Feedback:</p>
+      <p id="feedbackText" class="feedback-text"></p>
+
+      <button id="nextBtn" class="primary-btn">Next Question →</button>
+    </div>
+
+    <p id="errorMsg" class="error-msg"></p>
+
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/interview.js"></script>
+</body>
+</html>

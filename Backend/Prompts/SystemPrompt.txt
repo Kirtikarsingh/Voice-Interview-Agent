@@ -1,0 +1,6 @@
+﻿namespace Backend.Prompts
+{
+    public class SystemPrompt
+    {
+    }
+}

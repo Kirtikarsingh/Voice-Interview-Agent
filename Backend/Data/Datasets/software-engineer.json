@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "category": "Data Structures",
+    "difficulty": "Easy",
+    "question": "What is the difference between an array and a linked list?",
+    "idealAnswer": "An array stores elements in contiguous memory with fixed size and O(1) access by index, while a linked list stores elements as nodes with pointers, allowing dynamic size but O(n) access time.",
+    "keywords": [ "contiguous memory", "fixed size", "O(1) access", "pointers", "dynamic size", "O(n)" ],
+    "followUps": [
+      "Can you describe a real-world scenario where you'd prefer a linked list over an array?",
+      "How does insertion complexity differ between the two?"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "OOP",
+    "difficulty": "Easy",
+    "question": "What are the four main principles of Object-Oriented Programming?",
+    "idealAnswer": "Encapsulation, Abstraction, Inheritance, and Polymorphism. Encapsulation hides internal state, Abstraction hides implementation details, Inheritance allows reuse of code across classes, and Polymorphism allows objects to be treated as instances of their parent type.",
+    "keywords": [ "encapsulation", "abstraction", "inheritance", "polymorphism" ],
+    "followUps": [
+      "Can you give an example of polymorphism from a project you've worked on?",
+      "Why is encapsulation important for maintainability?"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Databases",
+    "difficulty": "Easy",
+    "question": "What is the difference between SQL and NoSQL databases?",
+    "idealAnswer": "SQL databases are relational, use structured schemas and tables, and support ACID transactions. NoSQL databases are non-relational, often schema-less, and designed for horizontal scalability and flexible data models.",
+    "keywords": [ "relational", "schema", "ACID", "non-relational", "scalability", "schema-less" ],
+    "followUps": [
+      "When would you choose a NoSQL database over SQL for a project?",
+      "What does ACID stand for?"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Data Structures",
+    "difficulty": "Medium",
+    "question": "Explain how a hash map works internally.",
+    "idealAnswer": "A hash map uses a hash function to convert a key into an index in an underlying array. Collisions are handled via chaining (linked lists at each bucket) or open addressing. Average time complexity for insert, delete, and lookup is O(1).",
+    "keywords": [ "hash function", "index", "collisions", "chaining", "open addressing", "O(1)" ],
+    "followUps": [
+      "What happens to performance if the hash function causes too many collisions?",
+      "How would you design a good hash function?"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "System Design",
+    "difficulty": "Medium",
+    "question": "How would you design a URL shortening service like Bitly?",
+    "idealAnswer": "Generate a unique short code (via hashing or base62 encoding of an auto-incrementing ID), store the mapping of short code to original URL in a database, use caching (like Redis) for fast lookups, and handle redirects via a lightweight service.",
+    "keywords": [ "short code", "base62", "database mapping", "caching", "Redis", "redirect" ],
+    "followUps": [
+      "How would you handle collisions if two requests generate the same short code?",
+      "How would you scale this system to handle millions of requests per day?"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "OOP",
+    "difficulty": "Medium",
+    "question": "What is the difference between an abstract class and an interface?",
+    "idealAnswer": "An abstract class can have both implemented and unimplemented methods and maintains state, while an interface (traditionally) only declares method signatures with no implementation. A class can implement multiple interfaces but inherit from only one abstract class.",
+    "keywords": [ "abstract class", "interface", "implementation", "state", "multiple interfaces", "single inheritance" ],
+    "followUps": [
+      "Why might you choose an interface over an abstract class in a real project?",
+      "Can a class implement multiple abstract classes? Why or why not?"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Databases",
+    "difficulty": "Medium",
+    "question": "What is database indexing and why does it improve query performance?",
+    "idealAnswer": "An index is a data structure (often a B-tree) that allows the database to find rows without scanning the entire table, similar to an index in a book. It speeds up read queries but adds overhead to write operations since indexes must be updated.",
+    "keywords": [ "B-tree", "scanning", "read queries", "write overhead", "index" ],
+    "followUps": [
+      "What's the tradeoff of adding too many indexes to a table?",
+      "How would you decide which columns to index?"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "System Design",
+    "difficulty": "Hard",
+    "question": "How would you design a scalable chat application supporting millions of concurrent users?",
+    "idealAnswer": "Use WebSockets for real-time bidirectional communication, a message broker (like Kafka) for handling message queues, horizontally scalable stateless servers behind a load balancer, and a database optimized for write-heavy workloads with sharding for scale.",
+    "keywords": [ "WebSockets", "message broker", "Kafka", "load balancer", "stateless servers", "sharding" ],
+    "followUps": [
+      "How would you ensure messages are delivered in order?",
+      "What happens if a user's WebSocket connection drops mid-conversation?"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "Concurrency",
+    "difficulty": "Hard",
+    "question": "What is a race condition and how can it be prevented?",
+    "idealAnswer": "A race condition occurs when multiple threads access shared data concurrently and the outcome depends on timing. It can be prevented using synchronization mechanisms like locks, mutexes, semaphores, or by using thread-safe/immutable data structures.",
+    "keywords": [ "shared data", "timing", "locks", "mutex", "semaphore", "thread-safe", "immutable" ],
+    "followUps": [
+      "What's the difference between a mutex and a semaphore?",
+      "Can you describe a bug you've seen caused by a race condition?"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "Algorithms",
+    "difficulty": "Hard",
+    "question": "Explain the time complexity trade-offs between quicksort and mergesort.",
+    "idealAnswer": "Quicksort has average O(n log n) time but O(n^2) worst case, and sorts in-place with low memory overhead. Mergesort guarantees O(n log n) in all cases but requires O(n) additional space. Quicksort is generally faster in practice due to cache locality.",
+    "keywords": [ "O(n log n)", "O(n^2)", "in-place", "worst case", "additional space", "cache locality" ],
+    "followUps": [
+      "When would you prefer mergesort over quicksort despite it needing more memory?",
+      "How does the choice of pivot affect quicksort's worst-case performance?"
+    ]
+  }
+]
